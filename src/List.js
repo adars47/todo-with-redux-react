@@ -13,7 +13,7 @@ const ListComponent = () =>{
     useEffect(()=>{
         let tasks = localStorage.getItem('tasks');
         tasks = JSON.parse(tasks);
-        store.dispatch(actions.restoreTasks(tasks));
+        store.dispatch(actions.restoreTasks(tasks??[]));
         setTodos(store.getState());
     },[])
 

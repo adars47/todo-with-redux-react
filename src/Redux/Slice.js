@@ -12,7 +12,7 @@ const counterSlice = createSlice({
           let newState =  state.filter((item)=>{
             return action.payload !== item.id;
           });
-          localStorage.setItem('tasks',JSON.stringify(state));
+          localStorage.setItem('tasks',JSON.stringify(newState));
           return newState;
         },
         restoreTasks: (state,action) => {
